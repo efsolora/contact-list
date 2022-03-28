@@ -32,7 +32,7 @@ function imprimirListaDeContactos() {
     return contactos;
 }
 alert("contactos actuales")
-alert(contactos)
+console.log(contactos);
 
 
 
