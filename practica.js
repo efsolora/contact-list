@@ -1,16 +1,20 @@
 
-let contactos = ["efrain solorzano", "lorena navarro", "lucas gutierres", "mirna solorzano"
-];
+let contactos = {
+    id: 1144046696,
+    nombres: "efrain ",
+    apellidos: "solorzano",
+    telefono: 3052428442,
+    ubicacion: "itagui",
+}
 
 /*  funcion para agregar contacto */
 
 let nuevoContacto;
-function agregarContacto(nuevoContacto) {
-    contactos.push(nuevoContacto);
-    return contactos;
+function agregarContacto(contactos) {
+
 }
 alert("agrega un contacto")
-alert(agregarContacto(prompt(nuevoContacto)));
+alert(agregarContacto(prompt(contactos)));
 
 
 
