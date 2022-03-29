@@ -1,10 +1,10 @@
 
-let contactos = ["efrain solorzano", "lorena navarro", "lucas gutierres", "mirna solorzano"
-];
+let contactos = ["efrain solorzano", "lorena navarro", "lucas gutierres"];
+
 
 /*  funcion para agregar contacto */
 
-let nuevoContacto;
+let nuevoContacto
 function agregarContacto(nuevoContacto) {
     contactos.push(nuevoContacto);
     return contactos;
@@ -32,6 +32,7 @@ function imprimirListaDeContactos() {
     return contactos;
 }
 alert("contactos actuales")
+alert(contactos);
 console.log(contactos);
 
 
