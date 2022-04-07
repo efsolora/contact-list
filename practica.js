@@ -36,7 +36,7 @@ function borrarContacto(eliminarContacto) {
 borrarContacto(prompt("eliminar contacto"));
 alert(contactos.nombres);
 console.log(contactos);
-
+/*  funcion para modificar contactos */
 let modificarContacto
 function modificarUnContacto(modificarContacto) {
     for (i = 0; i <= contactos.nombres.length; i++) {
