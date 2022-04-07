@@ -37,5 +37,19 @@ borrarContacto(prompt("eliminar contacto"));
 alert(contactos.nombres);
 console.log(contactos);
 
+let modificarContacto
+function modificarUnContacto(modificarContacto) {
+    for (i = 0; i <= contactos.nombres.length; i++) {
+        if (contactos.nombres[i] == modificarContacto) {
+            contactos.nombres[i] = prompt("nombres");
+            contactos.id[i] = prompt("id");
+            contactos.apellidos[i] = prompt("apellidos");
+            contactos.telefono[i] = prompt("telefono");
+            contactos.ubicacion[i] = prompt("ubicacion");
+        }
+    }
+}
+modificarUnContacto(prompt("modifica un contacto"));
+alert(contactos.nombres);
 
 
