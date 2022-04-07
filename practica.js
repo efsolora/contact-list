@@ -1,42 +1,36 @@
 
 let contactos = {
-    id: 1144046696,
-    nombres: "efrain ",
-    apellidos: "solorzano",
-    telefono: 3052428442,
-    ubicacion: "itagui",
-}
+    id: [1144046696, 16466826],
+    nombres: ["efrain ", "andres"],
+    apellidos: ["solorzano", "gaviria"],
+    telefono: [3052428442, 3016693220],
+    ubicacion: ["itagui", "medellin"],
+};
 
 /*  funcion para agregar contacto */
-
-let nuevoContacto;
-function agregarContacto(contactos) {
-
+alert("agregar contacto")
+function agregarContacto() {
+    contactos.id.push(prompt("id"));
+    contactos.nombres.push(prompt("nombres"));
+    contactos.apellidos.push(prompt("apellidos"));
+    contactos.telefono.push(prompt("telefono"));
+    contactos.ubicacion.push(prompt("ubicacion"));
 }
-alert("agrega un contacto")
-alert(agregarContacto(prompt(contactos)));
+agregarContacto();
+console.log(contactos)
 
 
-
+let contactoEliminar
 /* funcion para eliminar un contacto */
-let contactoParaEliminar;
-function borrarContacto(contactoParaEliminar) {
-    for (i = 0; i <= contactos.length - 1; i++) {
-        if (contactos[i] == contactoParaEliminar) {
-            contactos.splice(i, 1)
+function borrarContacto(contactoEliminar) {
+    for (i = 0; i <= contactos.nombres.length - 1; i++) {
+        if (contactos.nombres[i] == contactoEliminar) {
+            contactos.nombres[i].splice(i, 1)
         };
-    } return contactos;
+    };
 }
-alert("elimina un contacto");
-alert(borrarContacto(prompt(contactoParaEliminar)));
-
-
-/* funcion para imprimir en consola la lista de contactos */
-function imprimirListaDeContactos() {
-    return contactos;
-}
-alert("contactos actuales")
-console.log(contactos);
+borrarContacto(prompt("eliminar contacto"))
+alert(contactos.nombres);
 
 
 
