@@ -1,7 +1,7 @@
 
 let contactos = {
     id: [1144046696, 16466826],
-    nombres: ["efrain ", "andres"],
+    nombres: ["efrain", "andres"],
     apellidos: ["solorzano", "gaviria"],
     telefono: [3052428442, 3016693220],
     ubicacion: ["itagui", "medellin"],
@@ -17,20 +17,25 @@ function agregarContacto() {
     contactos.ubicacion.push(prompt("ubicacion"));
 }
 agregarContacto();
-console.log(contactos)
 
-
-let contactoEliminar
+let eliminarContacto
 /* funcion para eliminar un contacto */
-function borrarContacto(contactoEliminar) {
-    for (i = 0; i <= contactos.nombres.length - 1; i++) {
-        if (contactos.nombres[i] == contactoEliminar) {
-            contactos.nombres[i].splice(i, 1)
-        };
-    };
+function borrarContacto(eliminarContacto) {
+    for (i = 0; i <= contactos.nombres.length; i++) {
+        if (contactos.nombres[i] == eliminarContacto) {
+            contactos.nombres.splice(i, 1);
+            contactos.id.splice(i, 1);
+            contactos.apellidos.splice(i, 1);
+            contactos.telefono.splice(i, 1);
+            contactos.ubicacion.splice(i, 1);
+        }
+    }
+
+    return contactos.nombres;
 }
-borrarContacto(prompt("eliminar contacto"))
+borrarContacto(prompt("eliminar contacto"));
 alert(contactos.nombres);
+console.log(contactos);
 
 
 
